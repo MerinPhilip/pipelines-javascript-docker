@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: merinphilippipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: merinphilippipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: merinphilippipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: merinphilippipelinesjavascriptdocker 
+          image: prodb.azurecr.io/merinphilippipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
